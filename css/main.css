@@ -49,27 +49,37 @@ article div {
 }
 
 article header {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
   background-color: #259f95;
   background-image: none;
   border-radius: 0 0 6px 6px;
   color: #fff;
+
+  grid-template-areas:
+    "left right"
+    "left2 right";
 }
 
 h1 {
   margin: 0;
+  padding-top: 0;
   color: #fff;
   font-weight: normal;
   font-size: 1.125rem;
+
+  grid-area: left;
 }
 
 h2 {
   margin: 0;
+  padding-top: 0;
   color: #fff;
   font-weight: normal;
   font-size: 1.75rem;
+
+  grid-area: left2;
 }
 
 nav ul {
@@ -78,6 +88,8 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  grid-area: right;
 }
 
 nav a {
